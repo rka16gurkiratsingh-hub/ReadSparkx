@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookMatch 📚</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>BookMatch</h1>
+  <p>Select your favorite genre</p>
+
+  <select id="genre">
+    <option>Fantasy</option>
+    <option>Romance</option>
+    <option>Thriller</option>
+    <option>Self-Help</option>
+  </select>
+
+  <button onclick="start()">Start Swiping</button>
+
+  <script>
+    function start() {
+      localStorage.setItem("genre", document.getElementById("genre").value);
+      window.location.href = "feed.html";
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swipe Books</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 id="genreTitle"></h2>
+
+<div class="card" id="bookCard">
+  <h3 id="title"></h3>
+  <p id="author"></p>
+</div>
+
+<div class="buttons">
+  <button onclick="swipeLeft()">❌</button>
+  <button onclick="swipeRight()">❤️</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+const books = [
+  { title: "The Hobbit", author: "J.R.R. Tolkien" },
+  { title: "Harry Potter", author: "J.K. Rowling" },
+  { title: "Atomic Habits", author: "James Clear" }
+];
+
+let index = 0;
+let matches = 0;
+
+document.getElementById("genreTitle").innerText =
+  "Genre: " + localStorage.getItem("genre");
+
+function showBook() {
+  document.getElementById("title").innerText = books[index].title;
+  document.getElementById("author").innerText = books[index].author;
+}
+
+function swipeLeft() {
+  index = (index + 1) % books.length;
+  showBook();
+}
+
+function swipeRight() {
+  matches++;
+  alert("💥 IT'S A MATCH!! 💥");
+  index = (index + 1) % books.length;
+  showBook();
+}
+
+showBook();
+<h1>📚 Book Clubs</h1>
+<ul>
+  <li>Fantasy Readers Club</li>
+  <li>Romance Lovers</li>
+  <li>Thriller Squad</li>
+</ul>
+<p>(Chat feature coming soon 👀)</p>
+<h1>🏆 Leaderboard</h1>
+<ol>
+  <li>Alice – 12 books – 20 matches</li>
+  <li>Bob – 10 books – 17 matches</li>
+  <li>You – 3 books – 5 matches</li>
+</ol>
