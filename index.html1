@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReadSpark</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #6366f1, #22c55e);
+      color: white;
+    }
+    header h1 { font-size: 3rem; }
+    header p { margin-top: 1rem; font-size: 1.2rem; }
+
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+    h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+    p { line-height: 1.7; margin-bottom: 1rem; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #020617;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid #1e293b;
+    }
+
+    .leaderboard table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+    .leaderboard th, .leaderboard td {
+      padding: 1rem;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+    }
+    .leaderboard th { color: #22c55e; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ReadSpark</h1>
+  <p>Where reading becomes a challenge, a community, and a spark 🔥</p>
+</header>
+
+<section>
+  <h2>What is ReadSpark?</h2>
+  <p>
+    ReadSpark is a digital platform built to make reading exciting, social, and rewarding.
+    It combines books, articles, writing, and challenges into one space designed for students and young readers.
+  </p>
+</section>
+
+<section>
+  <h2>Core Features</h2>
+  <div class="features">
+    <div class="card">
+      <h3>📚 Smart Reading</h3>
+      <p>Track books, articles, and reading time automatically.</p>
+    </div>
+    <div class="card">
+      <h3>🏆 Leaderboards</h3>
+      <p>Compete weekly & monthly for most books read, reading streaks, and advanced reading levels.</p>
+    </div>
+    <div class="card">
+      <h3>✍️ Writing Zone</h3>
+      <p>Publish stories, essays, poems, and get community feedback.</p>
+    </div>
+    <div class="card">
+      <h3>🎖 Badges & Rewards</h3>
+      <p>Earn badges, streak bonuses, and exclusive ranks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="leaderboard">
+  <h2>Leaderboard Preview</h2>
+  <table>
+    <tr>
+      <th>Rank</th>
+      <th>User</th>
+      <th>Books Read</th>
+      <th>Streak</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>ReaderX</td>
+      <td>12</td>
+      <td>21 days</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>BookNerd</td>
+      <td>10</td>
+      <td>18 days</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>InkSoul</td>
+      <td>8</td>
+      <td>15 days</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>Our Vision</h2>
+  <p>
+    ReadSpark aims to build a generation that reads not because they have to,
+    but because they want to. By blending competition, creativity, and community,
+    we turn reading into a lifestyle.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 ReadSpark • Built by students, for students</p>
+</footer>
+
+</body>
+</html>
